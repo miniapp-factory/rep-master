@@ -339,9 +339,6 @@ export default function RepMaster() {
 
   const progressPercentFinalValue59 = ((exerciseTime - (exerciseTime - exerciseTime)) / exerciseTime) * 100; // placeholder
 
-  const progressPercentFinalValue60 = ((exerciseTime - (exerciseTime - exerciseTime)) / exerciseTime) * 100; // placeholder
-
-  const progressPercent... // truncated for brevity
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-4">
       <div className="flex justify-between w-full px-4">
