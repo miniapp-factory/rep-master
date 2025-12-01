@@ -98,3 +98,9 @@
 
 # 2025-12-01 06:24:32.540416
 +Delete everything and start over. Create a very simple game: show a button that says CLICK ME. When clicked add 10 points to score. Show score on screen. Add a 30 second countdown timer. When timer hits zero show GAME OVER and final score. Add PLAY AGAIN button. Do not use localStorage or any browser storage at all. Keep it extremely simple.
+
+# 2025-12-01 06:45:12.288438
++Add random exercise names from this list: PUSH-UP, SQUAT, BURPEE, PLANK, JUMPING JACK, LUNGE, CRUNCH, MOUNTAIN CLIMBER. Change the button text to show the current exercise. When clicked show new random exercise and add 10 points. Add combo system that starts at 1x and increases with each click. Multiply points by combo. Show combo counter on screen like Combo 5x. Add game over screen when timer ends showing WORKOUT COMPLETE, Final Score, and TRAIN AGAIN button to restart. Make exercise text big and bold. Flash green when clicked. Add motivational text like KEEP GOING or BEAST MODE based on combo level.
+
+# 2025-12-01 06:45:12.288974
++Add random exercise names from this list: PUSH-UP, SQUAT, BURPEE, PLANK, JUMPING JACK, LUNGE, CRUNCH, MOUNTAIN CLIMBER. Change the button text to show the current exercise. When clicked show new random exercise and add 10 points. Add combo system that starts at 1x and increases with each click. Multiply points by combo. Show combo counter on screen like Combo 5x. Add game over screen when timer ends showing WORKOUT COMPLETE, Final Score, and TRAIN AGAIN button to restart. Make exercise text big and bold. Flash green when clicked. Add motivational text like KEEP GOING or BEAST MODE based on combo level.
