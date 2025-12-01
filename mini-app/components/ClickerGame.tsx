@@ -42,7 +42,9 @@ export default function ClickerGame() {
       setCombo((c) => c + 1);
       setExercise(randomExercise());
       setFlash(true);
-      setMotivation((c) => (c + 1 >= 5 ? "BEAST MODE" : "KEEP GOING"));
+      const newCombo = combo + 1;
+      setCombo(newCombo);
+      setMotivation(newCombo >= 5 ? "BEAST MODE" : "KEEP GOING");
       setTimeout(() => setFlash(false), 200);
     }
   };
