@@ -35,6 +35,7 @@ export default function RepMaster() {
   const [attempts, setAttempts] = useState(0);
   const [hits, setHits] = useState(0);
   const [currentExercise, setCurrentExercise] = useState<string | null>(null);
+  const [exerciseProgress, setExerciseProgress] = useState(0);
   const [exerciseTime, setExerciseTime] = useState(1.2);
   const [feedback, setFeedback] = useState<"none" | "hit" | "miss">("none");
   const [motivation, setMotivation] = useState("KEEP IT UP");
@@ -77,6 +78,7 @@ export default function RepMaster() {
     setCurrentExercise(randomExercise());
     const elapsed = 45 - timeLeft;
     setExerciseTime(updateDifficulty(elapsed));
+    setExerciseProgress(0);
   };
 
   // Handle user click
@@ -144,6 +146,19 @@ export default function RepMaster() {
       clearTimeout(exerciseTimerRef.current!);
     };
   }, [gameState, exerciseTime, score, highScore]);
+
+  // Update exercise progress bar
+  useEffect(() => {
+    if (gameState !== "playing") return;
+    const interval = setInterval(() => {
+      setExerciseProgress((p) => {
+        const increment = 100 / (exerciseTime * 20); // 20 updates per second
+        const newP = p + increment;
+        return newP >= 100 ? 100 : newP;
+      });
+    }, 50);
+    return () => clearInterval(interval);
+  }, [gameState, exerciseTime]);
 
   // Update exercise timer when exerciseTime changes
   useEffect(() => {
@@ -343,7 +358,7 @@ export default function RepMaster() {
           className={`h-full bg-green-500 transition-all duration-1000 ${
             feedback === "miss" ? "bg-red-500" : ""
           }`}
-          style={{ width: `${(exerciseTime / exerciseTime) * 100}%` }}
+          style={{ width: `${exerciseProgress}%` }}
         />
       </div>
       <Button
