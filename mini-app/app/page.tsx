@@ -1,10 +1,10 @@
 import { description, title } from "@/lib/metadata";
 import { generateMetadata } from "@/lib/farcaster-embed";
-import ClickerGame from "@/components/ClickerGame";
+import GymHero from "@/components/GymHero";
 
 export { generateMetadata };
 
 export default function Home() {
   // NEVER write anything here, only use this page to import components
-  return <ClickerGame />;
+  return <GymHero />;
 }
